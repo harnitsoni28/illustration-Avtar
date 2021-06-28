@@ -1,0 +1,108 @@
+body{
+    background-image: url("images/hero_bg-0b10587db21a387d0ab6f322b05726b9.svg");
+    
+    background-size: cover;
+    background-position: center -75px;
+    background-repeat: no-repeat;
+}
+
+
+section{
+    display: flex;
+     flex-direction: column;
+     justify-content: center;
+     height: 100vh;
+     text-align: center;
+   
+}
+.frame {
+    font-family: 'Castoro', serif;
+    border: 5px solid black;
+    outline-style: outset;
+    outline-color: grey;
+    outline: #484848 solid 15px;
+    margin: auto;  
+    padding: 60px;
+    text-align: center;
+  }
+
+ h1{
+     font-size: 1.5rem;
+     font-weight: 400;
+ }
+
+ h4{
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+/* 
+button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+  
+  .button:hover {background-color: #3e8e41}
+  
+  .button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  } */
+ 
+
+  button{
+    position: relative;
+    height: 60px;
+    width: 200px;
+    border: none;
+    outline: none;
+    color: white;
+    background: #404040;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 200;
+  }
+  button:before{
+    position: absolute;
+    content: '';
+    top: -2px;
+    left: -2px;
+    height: calc(100% + 4px);
+    width: calc(100% + 4px);
+    border-radius: 5px;
+    z-index: -1;
+    opacity: 0;
+    filter: blur(5px);
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    background-size: 400%;
+    transition: opacity .3s ease-in-out;
+    animation: animate 20s linear infinite;
+  }
+  button:hover:before{
+    opacity: 1;
+  }
+  button:hover:active{
+    background: none;
+  }
+  button:hover:active:before{
+    filter: blur(2px);
+  }
+  @keyframes animate {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+  }
